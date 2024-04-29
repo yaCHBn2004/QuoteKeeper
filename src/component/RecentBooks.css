@@ -1,0 +1,51 @@
+.RecentBooks{
+  display: flex;  
+}
+.book{
+    display: flex;
+    background-color: #F4F4FF;
+    width: 256px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 10px;
+    border: solid 1px #b5abff;
+   
+}
+.bookImg{
+    display: flex;
+    
+    
+}
+.bookInfo{
+    display: flex;
+    flex-direction: column;
+    
+}
+.bookImg img{
+    height: 100%;
+    width: 100%;
+    padding-top: 5px;
+}
+.bookInfo button {
+   color: #6251DD;
+   flex: 2;
+   border-radius: 30px;
+   border-color: #6251DD ;
+   margin: 10px;
+}
+
+.bookInfo button:hover {
+    background-color: #6251DD ;
+    color: white;
+}
+
+.bookInfo h1 {
+    flex: 2;
+}
+
+
+.bookInfo p {
+    color: #090937;
+    opacity: 60%;
+    flex: 6;
+}

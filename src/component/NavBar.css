@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+}
+.NavBar{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+    height:80px ;
+    border-bottom: solid 1px #DBDBDB;
+    gap: 30%;
+}
+
+.NavBar .search {
+    background-color: #F1EEFD;
+    height: 44px;
+    border-radius:6px ;
+    display: flex;
+
+}
+
+.NavBar .search button {
+    position: relative;
+    background-color:transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+
+}
+.NavBar .search button img{
+   width: 20px;
+
+}
+.NavBar .search input {
+    height: 100%;
+    width: 100%;
+    border-radius:0px 6px 6px 0px;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #757575;
+    max-width: 350px;
+    width: 50vw;
+
+
+    
+}
+input::placeholder {
+    color: rgb(209, 209, 209);
+    font-size: 12px;
+}
+
+.NavBar .search input:focus {
+    outline: none;
+    background-color: rgb(240, 237, 253);
+}
+.NavBar .search:focus-within{
+    background-color: #5030E520;
+
+}
+
+.NavBar .PerInfo {
+ position: relative;
+ height: 100%;
+ display: flex;
+ align-items: center;
+
+}
+.NavBar .PerInfo .Info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    gap: 20px;
+    
+}
+.NavBar  .PerInfo .listHover {
+    display: none;
+    
+}
+
+.NavBar .PerInfo .Info .InfoL h1 {margin: 0px;}
+
+
+
+
+
+
+
+
+@keyframes bottom {
+    from {opacity: 0; bottom: 0px;}
+    to {opacity: 1;bottom: -70px;}
+  }
+
+
+
+
+.NavBar  .PerInfo:hover .listHover {
+    
+    /* display: none; */
+    position: absolute;
+    bottom: -70px; 
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    justify-content:space-around  ;  
+    animation: bottom; 
+    animation-duration: 1s;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.NavBar .PerInfo .listHover button {
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 6px;
+    width: 100px;
+    height: 30px;
+   
+}
+
+.NavBar .PerInfo .listHover button:hover {
+   background-color: #5030E520;
+}
+.NavBar .PerInfo .InfoL h1 {
+    font-size:16px ;
+    color: 0D062D;
+}
+.NavBar .PerInfo .InfoL h2 {
+    font-size:14px ;
+    color: #787486;
+    
+}
+   
+
+@media only screen and (max-width: 1200px) {
+   .NavBar{
+    gap: 10%;
+   }
+  }
+  @media only screen and (max-width: 800px) {
+    .NavBar{
+     gap: 30%;
+
+     background-color: #ffffff;
+    }
+    .NavBar .search input {
+        display: none;
+    }
+    .NavBar .search:hover input {
+        
+        display:block;
+    
+    }
+    .NavBar .search , .NavBar .search input:focus{
+        z-index: 2;
+    }
+    .NavBar .search:hover    {
+    position: absolute;
+    
+}
+   .NavBar{
+    justify-content:first baseline;
+   }
+}
+ 

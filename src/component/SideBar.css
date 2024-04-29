@@ -1,0 +1,188 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#SideBar {
+    height: 100vh;
+    position: relative;
+    left: 0;
+    top: 0;
+    border-right: solid 1px #DBDBDB;
+    transition: all 0.5s ease;
+    width: var(--navW);
+}
+
+.active {
+    --navW: 350px;
+}
+.hidden {
+    --navW: 80px;
+}
+
+
+#SideBar .title {
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    gap: 10px;
+    height:80px ;
+    width: 100%;
+    border-bottom: solid 1px #DBDBDB;
+ 
+}
+
+.hidden .title h1 {
+    display: none;
+    font-size: 20px;
+    flex: 6;
+    transition: all 1s ease;
+
+    
+}
+
+.active .title h1 {
+    opacity: 1;
+    font-size: 20px;
+    flex: 6;
+    transition: all 1s ease;
+
+}
+
+
+
+.hidden li a span{
+    display: none;
+     
+} 
+
+
+.hidden li a  {
+   
+    justify-content: center;
+   
+     
+} 
+
+
+
+
+#logo {
+    height: 25px; 
+    margin: 10px;
+    
+}
+
+
+ 
+#SideBar .title button {
+    background-color: transparent;
+    padding-top:10px ;
+    border: none;
+    flex : 2 ;
+    position: absolute;
+    right: 0;
+
+}
+.hidden .title button {
+    transition: all 0.6 ease;
+    display: none;
+    transform: rotate(180deg)  translate(-40px, -5px);
+   
+}
+.hidden:hover .title button {
+    display: inline-block;
+}
+
+
+
+
+
+#SideBar li   {
+    list-style-type: none;
+    width: 100%;
+    
+   
+
+    
+
+    
+}
+#SideBar li a   {
+    color: #787486;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    gap: 10px;
+
+}
+#SideBar li a span  {
+
+    font-size: 16px;
+}
+#SideBar li a img {
+   height: 20px;
+}
+#SideBar li a:hover  {
+   background-color: #F1EFFD;
+}
+
+.hidden .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+
+/* thoughts time  */
+
+.thoughtsTime {
+    background-color: var(--thC);
+    border-radius: 10px;
+    width: 90%;
+    margin: 5%;
+    height: 35vh;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+.thoughtsTime img {
+    position: absolute;
+    top : -40px ;
+    background-color: var(--thC) ; 
+    border-radius: 50%; 
+    width: 80px ;
+    z-index: 0;
+ }
+ .thoughtsTime h1 {
+    z-index: 1;
+    font-size:14px ;
+    flex: 2;
+    margin: 15px;
+ }
+ .thoughtsTime p {
+    font-size: 12px;
+    flex: 6;
+    margin: 20px;
+    text-align: center;
+    
+ }
+ .thoughtsTime button {
+    font-size: 12px;
+    flex: 1;
+    margin: 10px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    padding: 5px;
+    
+ }

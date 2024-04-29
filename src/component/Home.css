@@ -1,0 +1,8 @@
+.Home{
+    display: flex;
+    flex-direction: column;
+    
+}
+.Home h1{
+    margin: 20px;
+}
