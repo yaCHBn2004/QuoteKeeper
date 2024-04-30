@@ -9,26 +9,30 @@ const SideBar = () => {
     setNavState(!NavState);
   };
   const [quote , setQuote] =  useState("We don’t have any notice for you, till then you can share your thoughts with your peers.") ; 
-  const [backgroundColor, setBackgroundColor] = useState('white');
   const [count, setCount] = useState(0);
-
-  const changeBackgroundColor = () => {
-    const randomColor = '#f' + Math.floor((Math.random()*167772)).toString(16) ;
-    setBackgroundColor(randomColor);
-  }
-
-  useEffect(() => {
-    setTimeout(() => {
-      setCount((count) => count + 1);
-      changeBackgroundColor()
-      console.log('hrllo ')
-    }, 4000);
-  });
-
- 
+  const [backgroundColor, setBackgroundColor] = useState(getRandomLightColor);
+  const [darkenedColor, setDarkenedColor] = useState(getDarkenedColor(backgroundColor));
+    useEffect(() => {
+      const intervalId = setInterval(() => {
+        setBackgroundColor(getRandomLightColor());
+        setDarkenedColor(getDarkenedColor(backgroundColor));
+      }, 5000);
   
+      return () => clearInterval(intervalId);
+    }, []);
   
+    function getRandomLightColor() {
+      const colors = ['#FFCCCC', '#FFDDCC', '#FFEACC', '#FFFFCC', '#E5FFCC', '#CCFFCC', '#CCFFE5', '#CCFFFF', '#CCE5FF', '#CCCCFF', '#E5CCFF', '#FFCCFF'];
+    var color =  colors[Math.floor(Math.random() * colors.length)];
+    return color ;   
+    }
+    function getDarkenedColor(color) {
+      const darkenedFactor = 0.85; 
+      return color.replace('#', '').match(/.{1,2}/g).map(component => Math.round(parseInt(component, 16) * darkenedFactor).toString(16)).join('');
+    }
 
+  console.log(getDarkenedColor(backgroundColor)) ; 
+  
   return (
     <div id="SideBar" className={NavState ? "active" : "hidden"}>
       
@@ -81,12 +85,12 @@ const SideBar = () => {
           </Link>
         </li>
       </div>
-      <div className="thoughtsTime" style={{boxShadow: `0 4px 4px ${backgroundColor+ "AA"} `,backgroundColor:(backgroundColor +"12")}}>
+      <div className="thoughtsTime" style={{boxShadow: `0 4px 4px ${backgroundColor} `,backgroundColor:(backgroundColor)}}>
         
         <h1>Thoughts Time</h1>
-        <img src="./lightY.png" style={{backgroundColor:(backgroundColor +"12")}}/>
+        <img src="./lightY.png" style={{backgroundColor:(backgroundColor )}}/>
         <p>{quote}</p>
-        <button style={{backgroundColor : backgroundColor}}>Write a message</button>
+        <button style={{backgroundColor : darkenedColor}}>Write a message</button>
       </div>
     </div>
   );
