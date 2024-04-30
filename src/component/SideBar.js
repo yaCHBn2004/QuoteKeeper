@@ -27,7 +27,7 @@ const SideBar = () => {
     return color ;   
     }
     function getDarkenedColor(color) {
-      const darkenedFactor = 0.85; 
+      // const darkenedFactor = 0.85; 
       return color.replace('#', '').match(/.{1,2}/g).map(component => Math.round(parseInt(component, 16) * darkenedFactor).toString(16)).join('');
     }
 
