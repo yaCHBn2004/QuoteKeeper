@@ -41,6 +41,10 @@
     
 }
 
+.hidden .thoughtsTime {
+    display: none;
+}
+
 .active .title h1 {
     opacity: 1;
     font-size: 20px;
@@ -144,7 +148,6 @@
 /* thoughts time  */
 
 .thoughtsTime {
-    background-color: var(--thC);
     border-radius: 10px;
     width: 90%;
     margin: 5%;
@@ -154,14 +157,18 @@
     flex-direction: column;
     position: relative;
     align-items: center;
+    transition: box-shadow  3s ease;
+    transition: background-color 3s ease; 
+   
+    
 }
 .thoughtsTime img {
     position: absolute;
     top : -40px ;
-    background-color: var(--thC) ; 
     border-radius: 50%; 
     width: 80px ;
     z-index: 0;
+    transition: background-color 3s ease; 
  }
  .thoughtsTime h1 {
     z-index: 1;
