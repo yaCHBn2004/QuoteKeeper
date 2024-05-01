@@ -14,7 +14,6 @@ function App() {
     <SideBar/>
     <Routes>
         <Route path="/" element={<Home/>} />
-
         <Route path="/Quotes" element={<Quotes/>} />
     </Routes>
         
