@@ -2,40 +2,59 @@ import { Link } from "react-router-dom";
 import "./SideBar.css";
 import React, { useEffect, useState } from "react";
 
-
 const SideBar = () => {
   const [NavState, setNavState] = useState(true);
   const activateNav = () => {
     setNavState(!NavState);
   };
-  const [quote , setQuote] =  useState("We don’t have any notice for you, till then you can share your thoughts with your peers.") ; 
+  const [quote, setQuote] = useState(
+    "We don’t have any notice for you, till then you can share your thoughts with your peers."
+  );
   const [count, setCount] = useState(0);
   const [backgroundColor, setBackgroundColor] = useState(getRandomLightColor);
-  const [darkenedColor, setDarkenedColor] = useState(getDarkenedColor(backgroundColor));
-    useEffect(() => {
-      const intervalId = setInterval(() => {
-        setBackgroundColor(getRandomLightColor());
-        setDarkenedColor(getDarkenedColor(backgroundColor));
-      }, 5000);
-  
-      return () => clearInterval(intervalId);
-    }, []);
-  
-    function getRandomLightColor() {
-      const colors = ['#FFCCCC', '#FFDDCC', '#FFEACC', '#FFFFCC', '#E5FFCC', '#CCFFCC', '#CCFFE5', '#CCFFFF', '#CCE5FF', '#CCCCFF', '#E5CCFF', '#FFCCFF'];
-    var color =  colors[Math.floor(Math.random() * colors.length)];
-    return color ;   
-    }
-    function getDarkenedColor(color) {
-      // const darkenedFactor = 0.85; 
-      return color.replace('#', '').match(/.{1,2}/g).map(component => Math.round(parseInt(component, 16) * darkenedFactor).toString(16)).join('');
-    }
+  const [darkenedColor, setDarkenedColor] = useState(
+    getDarkenedColor(backgroundColor)
+  );
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setBackgroundColor(getRandomLightColor());
+      setDarkenedColor(getDarkenedColor(getRandomLightColor()));
+    }, 2000);
 
-  console.log(getDarkenedColor(backgroundColor)) ; 
-  
+    return () => clearInterval(intervalId);
+  }, []);
+
+  function getRandomLightColor() {
+    const colors = [
+      "#FFCCCC",
+      "#FFDDCC",
+      "#FFEACC",
+      "#FFFFCC",
+      "#E5FFCC",
+      "#CCFFCC",
+      "#CCFFE5",
+      "#CCFFFF",
+      "#CCE5FF",
+      "#CCCCFF",
+      "#E5CCFF",
+      "#FFCCFF",
+    ];
+    var color = colors[Math.floor(Math.random() * colors.length)];
+    return color;
+  }
+  function getDarkenedColor(color) {
+    const darkenedFactor = 0.85;
+    return color
+      .replace("#", "")
+      .match(/.{1,2}/g)
+      .map((component) =>
+        Math.round(parseInt(component, 16) * darkenedFactor).toString(16)
+      )
+      .join("");
+  }
+
   return (
     <div id="SideBar" className={NavState ? "active" : "hidden"}>
-      
       {/* here we have the title  */}
       <div className="title" onClick={activateNav}>
         <img id="logo" src="logo.png" alt="logo" />
@@ -47,7 +66,7 @@ const SideBar = () => {
 
       {/* here we have the navigation links*/}
 
-      <div className="nav" >
+      <div className="nav">
         <li>
           <Link to="/">
             <img src="./icons/home.png" />
@@ -88,9 +107,9 @@ const SideBar = () => {
       <div className="thoughtsTime" style={{boxShadow: `0 4px 4px ${backgroundColor} `,backgroundColor:(backgroundColor)}}>
         
         <h1>Thoughts Time</h1>
-        <img src="./lightY.png" style={{backgroundColor:(backgroundColor )}}/>
+        <img src="./lightY.png" style={{backgroundColor:(backgroundColor )  }}/>
         <p>{quote}</p>
-        <button style={{backgroundColor : darkenedColor}}>Write a message</button>
+        <button style={{backgroundColor : "black"}}>Write a message</button>
       </div>
     </div>
   );
