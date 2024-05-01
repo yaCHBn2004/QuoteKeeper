@@ -1,0 +1,28 @@
+.Quotes{
+    display: flex;
+    flex-direction: column;
+    
+}
+.Quotes .tags {
+    display: flex;
+    gap: 2px;
+    
+}
+.Quotes h1 {
+    padding: 10px;
+    font-size: 46px;
+}
+
+
+
+.Quotes .tag {
+    border: solid 1px black;
+    border-radius: 50px;
+    padding: 10px;
+
+}
+.Quotes .tag h1 {
+    font-size: 12px;
+    padding: 0px 2px;
+    
+}
