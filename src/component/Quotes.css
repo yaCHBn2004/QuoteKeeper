@@ -1,28 +1,59 @@
 .Quotes{
     display: flex;
     flex-direction: column;
-    
+    gap: 0px;
 }
+.Quotes .content {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  gap: 10px;
+}
+
 .Quotes .tags {
     display: flex;
-    gap: 2px;
+    gap: 5px;
     
 }
 .Quotes h1 {
-    padding: 10px;
     font-size: 46px;
+    color: #1B153A;
 }
 
 
 
 .Quotes .tag {
-    border: solid 1px black;
+    background-color: #E8EEF2;
     border-radius: 50px;
-    padding: 10px;
+    padding: 2px 5px;
 
 }
 .Quotes .tag h1 {
+    color: #1B153A;
     font-size: 12px;
-    padding: 0px 2px;
+    padding: 0px;
     
+   
+
+}
+.slections {
+    display: flex;
+    align-items: center;
+}
+.Quotes .content .slections button  {
+    height: 48px;
+    width: 48px;
+    border-radius: 8px;
+    background-color:#F1EFFD ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Quotes .content .slections button:hover  {
+   background-color:#e3dffb ;
+}
+.Quotes .content .slections button img  {
+    height: auto;
+
+    width: 80%;
 }
