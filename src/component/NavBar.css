@@ -12,7 +12,7 @@
 }
 
 .NavBar .search {
-    background-color: #F1EEFD;
+    background-color: #F5F5F5;
     height: 44px;
     border-radius:6px ;
     display: flex;
@@ -54,7 +54,7 @@ input::placeholder {
 
 .NavBar .search input:focus {
     outline: none;
-    background-color: rgb(240, 237, 253);
+    
 }
 .NavBar .search:focus-within{
     background-color: #5030E520;

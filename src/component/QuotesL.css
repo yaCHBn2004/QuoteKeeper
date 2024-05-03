@@ -1,0 +1,41 @@
+/* Quotes list  */
+
+
+.QuotesL{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quote{
+    background-color: #F7FAFC;
+    display: flex; 
+    height:72px ;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    padding: 10px;
+}
+.quote:hover{
+    background-color:#f1efff ;
+}
+.quote .img{
+    height: 48px;
+    width: 48px;
+    border-radius: 8px;
+    background-color: #E8EDF2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.quote .info {
+    flex: 90;
+    
+}
+.quote .info h3{
+    color:#4F7396 ;
+    font-size:14px ;
+}

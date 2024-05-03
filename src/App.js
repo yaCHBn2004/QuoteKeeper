@@ -7,6 +7,7 @@ import Quotes from './component/Quotes';
 
 
 
+
 function App() {
   return (
     <Router>

@@ -6,7 +6,10 @@ const Home = () => {
         <div className="Home" >
            <NavBar/>
          <h1>Home</h1>
-          
+         <div className="R-books">
+          <h1>Your recent books</h1>
+         <RecentBooks/>
+         </div>
         </div>
      );
 }

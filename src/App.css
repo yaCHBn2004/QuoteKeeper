@@ -4,6 +4,10 @@
   
     display: flex;
     --thC : rgb(241, 241, 241) ; 
+ 
+   box-sizing: border-box;
+
+    
 }
 
 .Home , .Quotes{
