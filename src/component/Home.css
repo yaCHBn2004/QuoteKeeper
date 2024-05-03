@@ -4,6 +4,22 @@
     
    
 }
+.content {
+    padding: 30px;
+
+}
 .Home h1{
-    margin: 20px;
+    font-size: 46px;
+    color: #0D062D;
+    
+}
+
+.Home .R-books {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Home .R-books  h1{
+    color: #090937;
+    font-size:32px ;
 }

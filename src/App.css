@@ -17,3 +17,34 @@
     display: flex;
 }
 
+/* CSS for the animated circle cursor */
+
+/* Hide default cursor */
+body {
+    cursor: none;
+  }
+  
+  /* Define the circle cursor */
+  .cursor {
+    position: fixed;
+    top: -10px; /* Adjust the position of the cursor */
+    left: -10px; /* Adjust the position of the cursor */
+    width: 20px; /* Diameter of the circle */
+    height: 20px; /* Diameter of the circle */
+    background-color: #5130e581; /* Color of the circle */
+    border-radius: 50%; /* Make it a circle */
+    z-index: 9999; /* Ensure it's above other elements */
+    pointer-events: none; /* Ensure it doesn't interfere with mouse events */
+    animation: pulse 1s infinite alternate; /* Apply pulsating animation */
+  }
+  
+  /* Define the pulsating animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.5);
+    }
+  }
+  

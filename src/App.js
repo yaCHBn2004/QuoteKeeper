@@ -9,9 +9,16 @@ import Quotes from './component/Quotes';
 
 
 function App() {
+  document.addEventListener('mousemove', function(e) {
+    const cursor = document.querySelector('.cursor');
+    cursor.style.left = e.pageX + 'px';
+    cursor.style.top = e.pageY + 'px';
+  });
+  
   return (
     <Router>
     <div className="App">  
+    <div class="cursor"></div>
     <SideBar/>
     <Routes>
         <Route path="/" element={<Home/>} />
