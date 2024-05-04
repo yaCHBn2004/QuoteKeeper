@@ -17,6 +17,9 @@
     width: 100%;
     gap: 20px;
     padding: 10px;
+    overflow: hidden; 
+    overflow: hidden; 
+    
 }
 .quote:hover{
     background-color:#f1efff ;
@@ -38,4 +41,14 @@
 .quote .info h3{
     color:#4F7396 ;
     font-size:14px ;
+}
+
+
+@media only screen and (max-width: 600px) {
+    /* Styles for screens smaller than 600px (phones) */
+ 
+.quote{
+    font-size:10px ;
+}
+
 }

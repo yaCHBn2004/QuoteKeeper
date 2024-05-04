@@ -63,3 +63,14 @@
     flex: 6;
 }
 
+@media only screen and (max-width: 600px) {
+    /* Styles for screens smaller than 600px (phones) */
+    .BookList{
+    
+        width: 200px; 
+    }
+    .book{
+        min-width: 178px;
+        height: 150px;
+    }
+}

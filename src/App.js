@@ -4,7 +4,10 @@ import {BrowserRouter as Router , Route , Switch , Routes } from 'react-router-d
 import Home from './component/Home';
 import NavBar from './component/NavBar';
 import Quotes from './component/Quotes';
-
+import BookMark from './component/BookMark';
+import MyBook from './component/MyBook';
+import Trash from './component/Trash';
+import Settings from './component/Settings';
 
 
 
@@ -23,6 +26,11 @@ function App() {
     <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/Quotes" element={<Quotes/>} />
+        <Route path="/BookMark" element={<BookMark/>} />
+        <Route path="/MyBook" element={<MyBook/>} />
+        <Route path="/Trash" element={<Trash/>} />
+        <Route path="/Settings" element={<Settings/>} />
+
     </Routes>
         
     
